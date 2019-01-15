@@ -11,6 +11,11 @@ constructor(props){
         return(
           <div>
               <h1 className="MainTitle">{this.state.name}(새 문서 생성)</h1>
+              <p>
+              <button>역사</button>
+              <button>삭제</button>
+              <button>이동</button>
+              </p>
 
               <a  href="https://forum.theseed.io/topic/232/%EC%9D%98%EA%B2%AC%EC%88%98%EB%A0%B4-%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8-%EB%AC%B8%EB%B2%95-%EB%B3%80%EA%B2%BD">
               [의견수렴] 리다이렉트 문법 변경</a><br/>
