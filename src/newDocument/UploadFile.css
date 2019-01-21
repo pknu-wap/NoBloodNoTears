@@ -32,3 +32,11 @@
     padding-left: 9px;
     padding-right: 9px;
 }
+#previewTextarea{
+    border-width: 2px;
+    min-width: 700px; 
+    min-height: 400px;
+    font-size: 20px;
+    font-family: Helvetica;
+    border-color:lightblue;
+}
