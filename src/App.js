@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux';
 
 import Main from './components/main/main';
 import PostForm from './components/main/postForm';
 
+import store from './store';
+
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
         <div className="App">
           <header className="App-header">
             <nav>
@@ -22,6 +26,7 @@ class App extends Component {
           <PostForm />
           <Main />
         </div>
+      </Provider>
     );
   }
 }

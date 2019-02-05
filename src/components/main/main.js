@@ -1,29 +1,26 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import Post from './post';
+import { connect } from 'react-redux';
+import { fetchPosts } from '../../actions/postAction';
 
-export default class Main extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            posts: []
+class Main extends Component {
+    componentWillMount(){
+        this.props.fetchPosts();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.newPost){
+            this.props.posts.unshift(nextProps.newPost);
         }
     }
 
-    componentWillMount(){
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(data => this.setState({ posts: data }));
-    }
-
-    updatePosts(){
-        let post_list = this.state.posts.map( (post) => (
-            <Post key={post.key} title={post.title} body={post.body} />
-        ));
-        return post_list;
-    }
-
     render() {
-        const post_list = this.updatePosts();
+        console.log(this.props.posts);
+        console.log(this.props.posts.map);
+        const post_list = this.props.posts.map( post => (
+            <Post key={post.id} title={post.title} body={post.body} />
+        ));
         return (
             <div id='main'>
                 <h1>Posts</h1>
@@ -32,3 +29,16 @@ export default class Main extends Component {
         )
     }
 }
+
+Main.propTypes = {
+    fetchPosts: PropTypes.func.isRequired,
+    posts: PropTypes.array.isRequired,
+    newPost: PropTypes.object
+};
+
+const mapStateToProps = state => ({
+    posts: state.posts.items,
+    newPost: state.posts.item
+});
+
+export default connect(mapStateToProps, {fetchPosts} )(Main);
