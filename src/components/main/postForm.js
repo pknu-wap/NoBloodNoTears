@@ -33,13 +33,13 @@ class PostForm extends React.Component{
     render() {
         return (
             <div>
-                <h1>Add Post</h1>
+                <h1>새 문서 생성</h1>
                 <form onSubmit={this.handleSubmit} >
-                    <h3>title</h3>
+                    <h3>제목</h3>
                     <input type='text' name='title' onChange={this.handleChange} value={this.state.title}/>
-                    <h3>body</h3>
+                    <h3>내용</h3>
                     <textarea type='text' name='body' onChange={this.handleChange} value={this.state.body}/><br/>
-                    <button type='submit'>Submit</button>
+                    <button type='submit'>저장</button>
                 </form>
                 <br/><hr/>
             </div>

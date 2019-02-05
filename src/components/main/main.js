@@ -6,6 +6,8 @@ import { fetchPosts } from '../../actions/postAction';
 
 class Main extends Component {
     componentWillMount(){
+        // 기존 DB에 있는 글들을 불러오기 위함
+        // 현재 DB가 없어서 임의의 JSON을 불러옴
         this.props.fetchPosts();
     }
 
@@ -16,14 +18,12 @@ class Main extends Component {
     }
 
     render() {
-        console.log(this.props.posts);
-        console.log(this.props.posts.map);
         const post_list = this.props.posts.map( post => (
             <Post key={post.id} title={post.title} body={post.body} />
         ));
         return (
             <div id='main'>
-                <h1>Posts</h1>
+                <h1>문서</h1>
                 {post_list}
             </div>
         )

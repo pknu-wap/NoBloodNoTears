@@ -22,17 +22,29 @@
   color: #61dafb;
 }
 
+#board{
+  display: flex;
+}
+#main {
+  width: 80%;
+  margin: auto;
+}
+
 #logo {
   margin-left: 40px;
 }
 
-nav, ul {
+nav, .navigation {
   display: flex;
 }
 
 ul li{
   list-style: none;
   margin-left: 30px;
+}
+
+.new{
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
