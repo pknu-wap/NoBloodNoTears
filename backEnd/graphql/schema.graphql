@@ -8,15 +8,9 @@ type Mutation {
     id: String!
     password: String!
     email: String!
+    token: String!
   ): Message!
   SignIn(id: String!, password: String!): Message!
-}
-
-type AccountsInfo {
-  name: String
-  id: String!
-  password: String!
-  email: String
 }
 
 type Message {
