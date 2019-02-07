@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.17.4"
+  },
+  "name": "NoBloodNoTears-BackEnd",
+  "version": "1.0.0",
+  "description": "PKNU WIKI Backend Service",
+  "main": "index.js",
+  "repository": "https://github.com/pknu-wap/NoBloodNoTears",
+  "author": "dl57934@pukyong.ac.kr",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  }
+}
