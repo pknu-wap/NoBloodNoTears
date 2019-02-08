@@ -1,0 +1,24 @@
+#titleStyle{
+    font-size: 25px;
+    font-weight: bold;
+}
+#editBtn{
+    background-color: red;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+.buttonStyle{
+    padding: 4px;
+}
+
+.box{
+    color: lightblue;
+    border: 1px;
+    border-radius: 2px;
+    border-style: solid ;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px;
+    
+}

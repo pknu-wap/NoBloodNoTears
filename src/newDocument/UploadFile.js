@@ -9,7 +9,6 @@ constructor(props){
         name:"윤예영 여신",
         content:""
     }
-
 }
 
 handleChange=(e)=>{
