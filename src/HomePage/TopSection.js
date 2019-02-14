@@ -5,8 +5,8 @@ export class TopSection extends React.Component{
         const headerStyle={
             background: '#1E90FF',
             color: '#F0FFFF',
-            paddingTop: '10px',
-            paddingButtom: '10px',
+            marginTop: '-5px',
+            padding: '10px'
             };
         return(
             <h1 style={headerStyle}>부경위키</h1>
