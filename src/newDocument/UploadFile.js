@@ -3,6 +3,7 @@ import './UploadFile.css'
 import {EditText} from './EditText.js';
 import {PreviewText} from './PreviewText';
 class UploadFile extends Component{
+    
 constructor(props){
     super(props);
     this.state={
@@ -19,7 +20,10 @@ handleChange=(e)=>{
 }
 
 handleToggle=(toggle)=>{
-    
+    this.setState({
+        
+    })
+  
 }
 
     render(){
@@ -31,19 +35,17 @@ handleToggle=(toggle)=>{
               <h1 className="MainTitle">{this.state.name} (새 문서 생성)</h1>
             
               <button id="deleteBtn">삭제</button>
+              <button style={{marginLeft: '1px'}}>저장</button>
               <br/>
 
               <a href={CHANGE_REDIRECT_DOCUMENT_URL}>[의견수렴] 리다이렉트 문법 변경</a>
               <br/>
-
-              <button id="redirect">편집</button>
-              <button>미리보기</button>
-              <br/>
-              
-              <EditText   value={this.state.content} onChange={this.handleChange} visibility={true}/>
+              <div className="SubTitle">편집</div>
+              <EditText   value={this.state.content} onChange={this.handleChange} />
+              <div className="SubTitle">미리보기</div>
               <PreviewText value={this.state.name + '\n' +this.state.content }/>
               <br/>
-                <button>저장</button>
+              
           </div>
         );
         
