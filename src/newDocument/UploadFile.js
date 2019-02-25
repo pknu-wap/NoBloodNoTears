@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import './UploadFile.css'
+import './UploadFile.css';
+import '../App.css';
 import {EditText} from './EditText.js';
 import {PreviewText} from './PreviewText';
 class UploadFile extends Component{
@@ -8,6 +9,7 @@ constructor(props){
     super(props);
     this.state={
         name:'윤예영 여신',
+        toggle: 'hide',
         content:''
     }
 }
@@ -19,12 +21,12 @@ handleChange=(e)=>{
     console.log(this.state.content);
 }
 
-handleToggle=(toggle)=>{
-    this.setState({
-        
-    })
+handleToggle=()=>{
+    let _toggle = this.state.toggle=='hide' ? 'show' : 'hide';
+    this.setState({ toggle: _toggle});
   
 }
+
 
     render(){
         const counter=0;
@@ -41,7 +43,9 @@ handleToggle=(toggle)=>{
               <a href={CHANGE_REDIRECT_DOCUMENT_URL}>[의견수렴] 리다이렉트 문법 변경</a>
               <br/>
               <div className="SubTitle">편집</div>
-              <EditText   value={this.state.content} onChange={this.handleChange} />
+              <button onClick={this.handleToggle} >편집창 불러오기</button>
+              <button >미리보기</button>
+              <EditText cl={this.state.toggle} value={this.state.content} onChange={this.handleChange} />
               <div className="SubTitle">미리보기</div>
               <PreviewText value={this.state.name + '\n' +this.state.content }/>
               <br/>
