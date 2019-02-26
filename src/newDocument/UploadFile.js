@@ -31,10 +31,6 @@ handleToggle2=()=>{
     this.setState({ toggle2: 'show'})
 }
 
-componentWillMount(){
-    if(this.state.toggle === 'show') this.handleToggle2('hide');
-    else if(this.state.toggle2 === 'show') this.handleToggle('hide');
-};
 
     render(){
         const CHANGE_REDIRECT_DOCUMENT_URL="https://forum.theseed.io/topic/232/%EC%9D%98%EA%B2%AC%EC%88%98%EB%A0%B4-%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8-%EB%AC%B8%EB%B2%95-%EB%B3%80%EA%B2%BD";        
