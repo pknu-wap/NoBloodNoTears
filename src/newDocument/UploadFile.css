@@ -6,14 +6,19 @@
     font-weight:bold ;
     font-size: 140%; 
 }
-.WriteContext{
+
+.hide {
+    display: none;
+  }
+.show {
+    display: block;
     min-width: 700px; 
     min-height: 400px;
     font-size: 20px;
     font-family: Helvetica;
     border-color:lightblue;
-}
-
+  }
+  
 #summaryInput{
     width: 700px;
     border-color: lightblue;

@@ -4,7 +4,7 @@ export class PreviewText extends Component{
     render(){
        
         return(
-        <textarea id="previewTextarea" value={this.props.value}></textarea>
+        <textarea id="previewTextarea" value={this.props.value} className={this.props.cl}/>
         );
     }
 }
