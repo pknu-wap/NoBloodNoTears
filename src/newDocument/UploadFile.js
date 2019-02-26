@@ -20,15 +20,15 @@ handleChange=(e)=>{
     });
 }
 
-//편집창 숨기기
-handleToggle=(_toggle)=>{
-    _toggle = this.state.toggle==='hide' ? 'show' : 'hide';
-    this.setState({ toggle: _toggle});
+// 미리보기창 숨기기
+handleToggle=()=>{
+    this.setState({ toggle2: 'hide'});
+    this.setState({ toggle: 'show' });
 }
-//미리보기창 숨기기
-handleToggle2=(_toggle2)=>{
-    _toggle2=this.state.toggle2==='hide' ? 'show':'hide';
-    this.setState({toggle2: _toggle2});
+// 편집창 숨기기
+handleToggle2=()=>{
+    this.setState({ toggle: 'hide' });
+    this.setState({ toggle2: 'show'})
 }
 
 componentWillMount(){
